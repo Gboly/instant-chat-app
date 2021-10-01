@@ -132,6 +132,11 @@ body {
     justify-content: center;
     padding-left: 1rem;
 }
+ 
+.userCount{
+    position: fixed;
+    left: 0;
+}
 
 @media only screen and (max-width: 576px) {
     .receivedMessage {
@@ -141,6 +146,10 @@ body {
     .sentMessage {
         max-width: 80%;
     }
+    .userCount{
+    position: absolute;
+    left: 0;
+}
 }
 
 @media only screen and (max-width: 360px) {
