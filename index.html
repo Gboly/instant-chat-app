@@ -26,52 +26,19 @@
             
             
         <input id="input" autocomplete="off" class="messageBox" placeholder="Type a message...">
+         
+            <a class="sendButton linkButton emojiButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons">
+                sentiment_satisfied_alt
+                </span>
+            </a>  
+        <emoji-picker class="light emoji" style="display: none;"></emoji-picker>      
+
         <button class="sendButton">
             <span class="material-icons">
                 send
             </span>
         </button>
-    <div class="dropup">
-        <button class="sendButton" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="material-icons">
-                sentiment_satisfied_alt
-            </span>
-        </button>
-        <div class="container p-2 dropdown-menu">
-            <div class="p-2 row row-cols-5">
-                <button class="p-1 col emoji">😀</button>
-                <button class="p-1 col emoji">😁</button>
-                <button class="p-1 col emoji">😂</button>
-                <button class="p-1 col emoji">🤣</button>
-                <button class="p-1 col emoji">😃</button>
-                <button class="p-1 col emoji">😄</button>
-                <button class="p-1 col emoji">😅</button>
-                <button class="p-1 col emoji">😆</button>
-                <button class="p-1 col emoji">😉</button>
-                <button class="p-1 col emoji">😊</button>
-                <button class="p-1 col emoji">😋</button>
-                <button class="p-1 col emoji">😎</button>
-                <button class="p-1 col emoji">😍</button>
-                <button class="p-1 col emoji">😘</button>
-                <button class="p-1 col emoji">🥰</button>
-                <button class="p-1 col emoji">🙂</button>
-                <button class="p-1 col emoji">🤗</button>
-                <button class="p-1 col emoji">🤩</button>
-                <button class="p-1 col emoji">🤔</button>
-                <button class="p-1 col emoji">🤨</button>
-                <button class="p-1 col emoji">😐</button>
-                <button class="p-1 col emoji">😑</button>
-                <button class="p-1 col emoji">😶</button>
-                <button class="p-1 col emoji">🙄</button>
-                <button class="p-1 col emoji">😏</button>
-                <button class="p-1 col emoji">😣</button>
-                <button class="p-1 col emoji">😥</button>
-                <button class="p-1 col emoji">😮</button>
-                <button class="p-1 col emoji">😯</button>
-            </div>
-        </div>
-    </div>
-         
        
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -80,6 +47,7 @@
         crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/index.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
 </body>
 
 </html>

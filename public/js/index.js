@@ -99,7 +99,31 @@ socket.on("users", function (data) {
     oldUsersValue.nodeValue = latestUsersValue;
 });
 
-$(".emoji").click(function(event){
+// get emoji-picker from HTML
+let picker = document.querySelector("emoji-picker");
+let emojiSelector = document.querySelector(".emojiButton");
+
+$('.linkButton').click(function(e) {   
+  e.preventDefault();
+  // show list of emoji's on button click
+  if (picker.style.display === "none") {
+    picker.style.display = "block";
+  } else {
+    picker.style.display = "none";
+  } 
+});
+picker.addEventListener("emoji-click", (event) => {
     event.preventDefault();
-    input.value = input.value + " " + $(this).text();
-})
+  let textBox = document.getElementById("input");
+  //Retrieve Emoji's from returned JSON
+  let myObj = JSON.stringify(event.detail.unicode);
+  // Remove double quotes at the beginning and end of emoji
+  myObj = myObj.replace(/^"(.*)"$/, "$1");
+  //add emoji to textbox
+  textBox.value = textBox.value + myObj;
+  textBox.focus();
+  console.log(event.detail);
+
+ 
+}); 
+ 

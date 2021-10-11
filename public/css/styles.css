@@ -138,6 +138,20 @@ body {
     left: 0;
 }
 
+.linkButton{
+    text-decoration: none;
+}
+.linkButton:hover,:active{
+    color: #d4d5d7;
+}
+
+emoji-picker{
+    position: absolute;
+    bottom:60px;
+    right: 10%;
+    height: 50vh;  
+}
+
 @media only screen and (max-width: 576px) {
     .receivedMessage {
         max-width: 85%;
@@ -147,9 +161,18 @@ body {
         max-width: 80%;
     }
     .userCount{
-    position: absolute;
-    left: 0;
-}
+        position: absolute;
+        left: 0;
+    }
+    emoji-picker{
+        --num-columns: 3;
+        --indicator-color:transperant;
+         --category-emoji-padding: 4px;
+        width: 40vmin;
+        height: 50vh;
+        right: 1px;
+    }
+
 }
 
 @media only screen and (max-width: 360px) {
@@ -159,5 +182,11 @@ body {
     
     .sentMessage {
         max-width: 90%;
+    }
+    emoji-picker{
+        --num-columns: 3;
+        width: 40vmin;
+        height: 50vh;
+        right: 1px;
     }
 }
